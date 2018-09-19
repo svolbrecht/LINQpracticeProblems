@@ -12,22 +12,31 @@ namespace LINQpracticeProblems
         // 1.Using LINQ, write a function that determines if any word in a list contains the substring “th”.
         public static void IdentifyThWords()
         {
-        List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
 
-        var thWords = words.Where (w => w.Contains("th"));
+            var thWords = words.Where (w => w.Contains("th"));
 
-            foreach(var word in thWords)
-            {
-                Console.WriteLine(word);
-            }
+                foreach(var word in thWords)
+                {
+                    Console.WriteLine(word);
+                }
         }
 
 
 
         // 2.Using LINQ, write a function that takes in a list of strings and returns a copy of the list without duplicates.
-        static void Main2(string[] args)
+        public static void RemoveDuplicateStrings()
         {
-        List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
+
+            List<string> names = new List<string>() { "Mike", "Dan", "Scott", "Nick", "Mike" };
+
+            var noDuplicates = names.Distinct();
+
+            foreach(var name in noDuplicates)
+            {
+                Console.WriteLine(name);
+            }
+
         }
 
 

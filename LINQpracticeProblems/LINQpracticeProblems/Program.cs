@@ -10,9 +10,10 @@ namespace LINQpracticeProblems
     {
         static void Main(string[] args)
         {
-           
-            LINQpracticeProblems.IdentifyThWords();
+
+            LINQpracticeProblems.RemoveDuplicateStrings();
             Console.ReadKey();
+         
         }
     }
 }
