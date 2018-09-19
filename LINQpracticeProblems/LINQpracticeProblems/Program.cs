@@ -10,7 +10,9 @@ namespace LINQpracticeProblems
     {
         static void Main(string[] args)
         {
-            
+           
+            LINQpracticeProblems.IdentifyThWords();
+            Console.ReadKey();
         }
     }
 }
