@@ -11,9 +11,12 @@ namespace LINQpracticeProblems
         static void Main(string[] args)
         {
 
-            LINQpracticeProblems.RemoveDuplicateStrings();
+            LINQpracticeProblems.CalculateGradeAverage();
             Console.ReadKey();
-         
+
         }
+
+        
+
     }
 }

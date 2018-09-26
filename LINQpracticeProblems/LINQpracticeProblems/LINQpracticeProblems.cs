@@ -41,8 +41,10 @@ namespace LINQpracticeProblems
 
 
 
-        // 3.Using LINQ, write a function that calculates the class grade average after dropping the lowest grade for each student.The function should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
-        static void Main3(string[] args)
+        //      3.Using LINQ, write a function that calculates the class grade average after dropping the lowest grade for each student.
+        //  The function should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), drops the lowest grade from each string, 
+        //  averages the rest of the grades from that string, then averages the averages.
+        public static void CalculateGradeAverage()
         {
                 List<string> classGrades = new List<string>()
                 {
@@ -51,13 +53,25 @@ namespace LINQpracticeProblems
                 "73,88,83,99,64",
                 "98,100,66,74,55"
                 };
+
+            var averagedGradesWithoutLowestGrade = classGrades.Average(c => c.Split(',').Where(s => s != c.Split(',').Min()).Select(x => int.Parse(x)).Average());
+
+
         }
 
 
-        // 4.Write a function that takes in a string of letters(i.e. “Terrill”) and returns an alphabetically ordered string corresponding to the letter frequency(i.e. "E1I1L2R2T1")
+        //      4.Write a function that takes in a string of letters(i.e. “Terrill”) and returns an alphabetically ordered string corresponding
+        //   to the letter frequency(i.e. "E1I1L2R2T1")
 
 
+        public static void ConvertString()
+        {
+            string terrill = "Terrill";
+            
 
+            var newTerrill = terrill.GroupBy(x => x).Select(x => new Terrill(x.Key, x.Count()));
+
+        } 
 
 
     }
